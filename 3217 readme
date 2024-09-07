@@ -1,0 +1,17 @@
+Purpose: The function modifiedList removes nodes from a linked list if the node's value is found in the provided vector nums.
+
+Input: It takes two inputs:
+
+nums: a vector of integers that represents the values to be removed from the list.
+head: the head (starting point) of the linked list.
+Set Conversion: It converts the nums vector into an unordered set (st) to speed up lookups when checking if a value should be removed.
+
+Head Node Removal: It first checks if the head node's value is in the set. If so, it deletes the head node and moves to the next node until the head points to a node not in the set.
+
+Iterating through the List: It then moves through the rest of the list, starting from the updated head, checking each node's value.
+
+Deleting a Node: If a node's value is in the set, the node is skipped by adjusting the next pointer of the previous node and deleting the node to free memory.
+
+Return: Finally, the function returns the updated linked list, with all nodes containing values from nums removed.
+
+In summary, this function removes nodes from the linked list if their value exists in the nums list.
